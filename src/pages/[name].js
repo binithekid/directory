@@ -38,27 +38,27 @@ const Item = ({ item, relatedItems }) => {
             ></div>
           </div>
           <h1 className="text-4xl text-gray-800 font-semibold tracking-tight">
-            {item.name}
+            {item?.name}
           </h1>
         </div>
         <div className="flex flex-col gap-4">
           <p className="text-lg text-gray-700 tracking-tight">
-            {item.description}
+            {item?.description}
           </p>
-          <Link href={item.Website} target="_blank" rel="noopener noreferrer">
+          <Link href={item?.Website} target="_blank" rel="noopener noreferrer">
             <button className="w-max text-sm py-2 transition-all text-white flex flex-row items-center gap-2 hover:opacity-80 bg-black px-4 rounded">
               Visit Website <GoArrowUpRight />
             </button>
           </Link>
         </div>
         <div className="py-4">
-          <img src={item.image} className="border rounded-lg object-cover" />
+          <img src={item?.image} className="border rounded-lg object-cover" />
         </div>
         <p className="text-base text-gray-700 tracking-tight">{item.content}</p>
         <div className="py-4">
           <p className="text-base text-gray-700 tracking-tight">{`Key benefits of ${item.name} include:`}</p>
           <ul className="py-2 list-disc text-gray-700 pl-6">
-            {item.benefits.map((benefit, index) => (
+            {item?.benefits.map((benefit, index) => (
               <li
                 className="py-1"
                 key={index}
@@ -72,7 +72,7 @@ const Item = ({ item, relatedItems }) => {
           <div className="w-1/2">
             <h1 className="font-semibold text-2xl">Links:</h1>
             <div className="py-2 list-disc text-gray-700">
-              {item.link.map((linkItem, index) => {
+              {item?.link.map((linkItem, index) => {
                 const [text, url] = Object.entries(linkItem)[0];
                 return (
                   <p
@@ -94,7 +94,7 @@ const Item = ({ item, relatedItems }) => {
             <div className="py-2 list-disc text-gray-700">
               <p className="flex py-1 flex-row items-center gap-1">
                 <FaCodeFork className="text-gray-400 mr-1 text-lg" />{" "}
-                {item.category}
+                {item?.category}
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Item = ({ item, relatedItems }) => {
         <div className="flex text-gray-700 gap-2 flex-col py-4">
           <h1 className="font-semibold text-2xl">Related topics:</h1>
           <div className="flex flex-row flex-wrap gap-2">
-            {item.related.map((item, index) => (
+            {item?.related.map((item, index) => (
               <p key={index} className="flex flex-row items-center">
                 <HiOutlineHashtag className="text-gray-400" />
                 {item}
@@ -113,9 +113,9 @@ const Item = ({ item, relatedItems }) => {
         </div>
 
         <div className="flex gap-2 text-gray-700 flex-col py-6">
-          <h1 className="font-semibold text-2xl">{`Similar Alternatives to ${item.name}:`}</h1>
+          <h1 className="font-semibold text-2xl">{`Similar Alternatives to ${item?.name}:`}</h1>
           <div className="py-2 flex flex-row gap-4">
-            {relatedItems.map((item, index) => (
+            {relatedItems?.map((item, index) => (
               <Card item={item} key={index} />
             ))}
           </div>
@@ -130,14 +130,14 @@ const Item = ({ item, relatedItems }) => {
               Category
             </p>
             <hr className="flex-grow mx-3 border-gray-100" />
-            <p className="text-gray-700 tracking-tight">{item.category}</p>
+            <p className="text-gray-700 tracking-tight">{item?.category}</p>
           </div>
           <div className="flex flex-row items-center">
             <p className="text-gray-500 tracking-tight flex flex-row items-center gap-1">
               <MdOutlineUpdate /> Added
             </p>
             <hr className="flex-grow mx-3 border-gray-100" />
-            <p className="text-gray-700 w-max tracking-tight">{item.date}</p>
+            <p className="text-gray-700 w-max tracking-tight">{item?.date}</p>
           </div>
           <div className="flex flex-row items-center">
             <p className="text-gray-500 tracking-tight flex flex-row items-center gap-1">
@@ -147,13 +147,13 @@ const Item = ({ item, relatedItems }) => {
             <hr className="flex-grow mx-3 border-gray-100" />
 
             <div className="flex flex-row gap-1 items-center">
-              <p className="text-gray-700 tracking-tight">{item.rating} / 5</p>
+              <p className="text-gray-700 tracking-tight">{item?.rating} / 5</p>
             </div>
           </div>
         </div>{" "}
         <p className="text-gray-700 font-medium pt-8">Repository Details:</p>
         <div className="flex flex-col gap-2 pt-3">
-          {item.technology.map((item, index) => (
+          {item?.technology.map((item, index) => (
             <div
               key={index}
               className="flex flex-row text-sm items-center gap-2"
@@ -162,8 +162,8 @@ const Item = ({ item, relatedItems }) => {
                 className="h-2 w-2 rounded-full"
                 style={{ backgroundColor: item.color }}
               />
-              <p className="text-gray-500">{item.name}</p>
-              <p className="text-gray-500">({item.percentage}%)</p>
+              <p className="text-gray-500">{item?.name}</p>
+              <p className="text-gray-500">({item?.percentage}%)</p>
             </div>
           ))}
         </div>{" "}
