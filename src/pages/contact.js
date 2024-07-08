@@ -99,10 +99,10 @@ const Contact = () => {
             criteria:
           </p>
           <ul className="flex flex-col text-sm pl-6 text-gray-600 gap-2 py-3 list-disc">
-            <li>It's open source</li>
-            <li>It’s free to use or can be self-hosted</li>
-            <li>It’s actively maintained</li>
-            <li>It’s a good alternative to a proprietary software</li>
+            <li>It&apos;s open source</li>
+            <li>It&apos;s free to use or can be self-hosted</li>
+            <li>It&apos;s actively maintained</li>
+            <li>It&apos;s a good alternative to a proprietary software</li>
           </ul>
         </div>
       </div>

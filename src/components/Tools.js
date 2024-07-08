@@ -186,8 +186,8 @@ const Tools = () => {
         </button>
       </div>
       <div className="py-10 rounded grid w-full gap-6 grid-cols-1 md:grid-cols-3">
-        {dataList.map((item, key) => (
-          <Card item={item} index={key} />
+        {dataList.map((item, index) => (
+          <Card item={item} key={index} />
         ))}
       </div>
       <Pagination />

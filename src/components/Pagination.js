@@ -32,6 +32,7 @@ const Pagination = () => {
           <p>Page:</p>
           {pageNumbers.map((page) => (
             <button
+              key={page}
               className={`${
                 page === pageNumber
                   ? "py-1 font-semibold px-2 rounded text-black bg-gray-200"

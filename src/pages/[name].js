@@ -153,8 +153,11 @@ const Item = ({ item, relatedItems }) => {
         </div>{" "}
         <p className="text-gray-700 font-medium pt-8">Repository Details:</p>
         <div className="flex flex-col gap-2 pt-3">
-          {item.technology.map((item) => (
-            <div className="flex flex-row text-sm items-center gap-2">
+          {item.technology.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-row text-sm items-center gap-2"
+            >
               <div
                 className="h-2 w-2 rounded-full"
                 style={{ backgroundColor: item.color }}
