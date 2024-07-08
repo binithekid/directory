@@ -58,7 +58,7 @@ const Item = ({ item, relatedItems }) => {
         <div className="py-4">
           <p className="text-base text-gray-700 tracking-tight">{`Key benefits of ${item.name} include:`}</p>
           <ul className="py-2 list-disc text-gray-700 pl-6">
-            {item?.benefits.map((benefit, index) => (
+            {item?.benefits?.map((benefit, index) => (
               <li
                 className="py-1"
                 key={index}
@@ -72,7 +72,7 @@ const Item = ({ item, relatedItems }) => {
           <div className="w-1/2">
             <h1 className="font-semibold text-2xl">Links:</h1>
             <div className="py-2 list-disc text-gray-700">
-              {item?.link.map((linkItem, index) => {
+              {item?.link?.map((linkItem, index) => {
                 const [text, url] = Object.entries(linkItem)[0];
                 return (
                   <p
@@ -103,7 +103,7 @@ const Item = ({ item, relatedItems }) => {
         <div className="flex text-gray-700 gap-2 flex-col py-4">
           <h1 className="font-semibold text-2xl">Related topics:</h1>
           <div className="flex flex-row flex-wrap gap-2">
-            {item?.related.map((item, index) => (
+            {item?.related?.map((item, index) => (
               <p key={index} className="flex flex-row items-center">
                 <HiOutlineHashtag className="text-gray-400" />
                 {item}
@@ -153,7 +153,7 @@ const Item = ({ item, relatedItems }) => {
         </div>{" "}
         <p className="text-gray-700 font-medium pt-8">Repository Details:</p>
         <div className="flex flex-col gap-2 pt-3">
-          {item?.technology.map((item, index) => (
+          {item?.technology?.map((item, index) => (
             <div
               key={index}
               className="flex flex-row text-sm items-center gap-2"
