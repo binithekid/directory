@@ -18,9 +18,9 @@ const Contact = () => {
         </h1>
         <p className="md:md:w-4/5 text-lg tracking-tight text-gray-600 w-full">
           If you have any inquiries or need assistance navigating our
-          comprehensive SaaS directory, please don't hesitate to reach out to
-          us. We're here to help you find the best solutions for your business
-          needs.
+          comprehensive SaaS directory, please don&apos;t hesitate to reach out
+          to us. We&apos;re here to help you find the best solutions for your
+          business needs.
         </p>
       </div>
       <div className="py-3">
@@ -95,7 +95,7 @@ const Contact = () => {
         </form>
         <div className="flex flex-col flex-end w-1/3 h-max">
           <p className="text-sm text-gray-600">
-            Please make sure the software you’re sub is meets the following
+            Please make sure the software you&apos;re sub is meets the following
             criteria:
           </p>
           <ul className="flex flex-col text-sm pl-6 text-gray-600 gap-2 py-3 list-disc">

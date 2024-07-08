@@ -103,8 +103,8 @@ const Item = ({ item, relatedItems }) => {
         <div className="flex text-gray-700 gap-2 flex-col py-4">
           <h1 className="font-semibold text-2xl">Related topics:</h1>
           <div className="flex flex-row flex-wrap gap-2">
-            {item.related.map((item) => (
-              <p className="flex flex-row items-center">
+            {item.related.map((item, index) => (
+              <p key={index} className="flex flex-row items-center">
                 <HiOutlineHashtag className="text-gray-400" />
                 {item}
               </p>
@@ -115,8 +115,8 @@ const Item = ({ item, relatedItems }) => {
         <div className="flex gap-2 text-gray-700 flex-col py-6">
           <h1 className="font-semibold text-2xl">{`Similar Alternatives to ${item.name}:`}</h1>
           <div className="py-2 flex flex-row gap-4">
-            {relatedItems.map((item) => (
-              <Card item={item} />
+            {relatedItems.map((item, index) => (
+              <Card item={item} key={index} />
             ))}
           </div>
         </div>
