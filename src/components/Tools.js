@@ -7,6 +7,7 @@ import { dataList } from "@/data/dataList";
 import Card from "./Card";
 import Pagination from "./Pagination";
 import { motion, AnimatePresence } from "framer-motion";
+import { database } from "@/firebase/config";
 
 const Tools = () => {
   const [openSort, setOpenSort] = useState(false);
